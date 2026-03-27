@@ -48,11 +48,20 @@ export default function Contact() {
     }
     setErrors({})
     setSubmitting(true)
-    // Simulate submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setSubmitting(false)
-    setSubmitted(true)
-    setForm({ name: '', email: '', message: '' })
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error('Failed to send')
+      setSubmitted(true)
+      setForm({ name: '', email: '', message: '' })
+    } catch {
+      setErrors({ message: 'Something went wrong. Please try again or email edwin@cto1.com directly.' })
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const handleChange = (
