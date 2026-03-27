@@ -82,10 +82,16 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="#hero"
-            className="font-orbitron text-2xl font-bold gradient-text hover:opacity-80 transition-opacity"
-            aria-label="CTO1 - Home"
+            className="hover:opacity-80 transition-opacity flex items-center"
+            aria-label="CTO1 - Core Technology Orchestration - Home"
           >
-            CTO1
+            <img
+              src="/logos/cto1_logo.svg"
+              alt="CTO1 — Core Technology Orchestration"
+              width={220}
+              height={52}
+              style={{ height: '40px', width: 'auto' }}
+            />
           </Link>
 
           {/* Desktop Nav */}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="80" viewBox="0 0 220 80">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#8B00FF"/>
+    </linearGradient>
+  </defs>
+  <text x="10" y="52" font-family="Courier New,monospace" font-weight="bold" font-size="32" fill="url(#g3)">&lt;</text>
+  <text x="38" y="52" font-family="Courier New,monospace" font-weight="bold" font-size="32" fill="white">CTO</text>
+  <text x="112" y="52" font-family="Courier New,monospace" font-weight="bold" font-size="32" fill="url(#g3)">1</text>
+  <text x="132" y="52" font-family="Courier New,monospace" font-weight="bold" font-size="32" fill="url(#g3)">/&gt;</text>
+  <!-- Underline glow -->
+  <rect x="10" y="56" width="190" height="2" rx="1" fill="url(#g3)" opacity="0.3"/>
+</svg>

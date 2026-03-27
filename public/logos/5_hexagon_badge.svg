@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="80" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#8B00FF"/>
+    </linearGradient>
+  </defs>
+  <!-- Hexagon -->
+  <polygon points="40,5 65,19 65,47 40,61 15,47 15,19" fill="none" stroke="url(#g5)" stroke-width="2"/>
+  <polygon points="40,11 59,22 59,44 40,55 21,44 21,22" fill="url(#g5)" fill-opacity="0.08"/>
+  <text x="40" y="37" font-family="Arial Black,sans-serif" font-weight="900" font-size="14" fill="white" text-anchor="middle">CTO</text>
+  <line x1="22" y1="42" x2="58" y2="42" stroke="url(#g5)" stroke-width="0.75" stroke-opacity="0.6"/>
+  <text x="40" y="52" font-family="Arial Black,sans-serif" font-weight="900" font-size="12" fill="url(#g5)" text-anchor="middle">1</text>
+  <!-- Label -->
+  <text x="82" y="36" font-family="Arial,sans-serif" font-weight="bold" font-size="20" letter-spacing="2" fill="white">CTO<tspan fill="url(#g5)">1</tspan></text>
+  <text x="82" y="51" font-family="Arial,sans-serif" font-size="8" letter-spacing="1.5" fill="#8B8B9B">TECHNOLOGY LEADERSHIP</text>
+</svg>

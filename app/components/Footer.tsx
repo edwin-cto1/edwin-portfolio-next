@@ -22,10 +22,14 @@ export default function Footer() {
           {/* Logo */}
           <Link
             href="#hero"
-            className="font-orbitron text-xl font-bold gradient-text hover:opacity-80 transition-opacity"
+            className="hover:opacity-80 transition-opacity"
             aria-label="CTO1 - Back to top"
           >
-            CTO1
+            <img
+              src="/logos/cto1_logo.svg"
+              alt="CTO1 — Core Technology Orchestration"
+              style={{ height: '32px', width: 'auto' }}
+            />
           </Link>
 
           {/* Links */}
