@@ -54,15 +54,19 @@ export default function WhyCTO1() {
           {values.map((v) => (
             <div
               key={v.title}
-              className="glass-card rounded-2xl p-8 text-center hover:border-electric-blue/30 transition-all duration-300"
+              className="glass-card rounded-2xl p-8 text-center hover:border-electric-blue/30 transition-all duration-300 relative overflow-hidden group"
             >
-              <div className="mb-5 flex justify-center" aria-hidden="true">
-                <v.Icon size={44} className="drop-shadow-[0_0_8px_rgba(0,212,255,0.4)]" />
+              {/* Icon as background watermark */}
+              <div
+                aria-hidden="true"
+                className="absolute bottom-3 right-3 opacity-10 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none"
+              >
+                <v.Icon size={80} />
               </div>
-              <h3 className="font-orbitron text-base font-bold text-text-primary mb-3">
+              <h3 className="font-orbitron text-base font-bold text-text-primary mb-3 relative z-10">
                 {v.title}
               </h3>
-              <p className="text-text-dim text-sm leading-relaxed">
+              <p className="text-text-dim text-sm leading-relaxed relative z-10">
                 {v.description}
               </p>
             </div>

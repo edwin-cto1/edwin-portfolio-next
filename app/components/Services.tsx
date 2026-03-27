@@ -88,7 +88,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
       ref={ref}
       role="article"
       aria-labelledby={`service-title-${service.id}`}
-      className={`glass-card rounded-2xl p-6 sm:p-8 hover:border-electric-blue/30 hover:bg-white/6 transition-all duration-500 group cursor-default ${
+      className={`glass-card rounded-2xl p-6 sm:p-8 hover:border-electric-blue/30 hover:bg-white/6 transition-all duration-500 group cursor-default relative overflow-hidden ${
         visible
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-8'
@@ -97,16 +97,20 @@ function ServiceCard({ service, index }: ServiceCardProps) {
         transition: `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s, border-color 0.3s, background-color 0.3s`,
       }}
     >
-      <div className="mb-5 inline-block" aria-hidden="true">
-        <service.Icon size={52} className="drop-shadow-[0_0_8px_rgba(0,212,255,0.5)]" />
+      {/* Icon as background watermark */}
+      <div
+        aria-hidden="true"
+        className="absolute bottom-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none"
+      >
+        <service.Icon size={96} />
       </div>
       <h3
         id={`service-title-${service.id}`}
-        className="font-orbitron text-lg font-bold text-text-primary mb-3 group-hover:gradient-text transition-colors"
+        className="font-orbitron text-lg font-bold text-text-primary mb-3 group-hover:gradient-text transition-colors relative z-10"
       >
         {service.title}
       </h3>
-      <p className="text-text-dim leading-relaxed text-sm sm:text-base">
+      <p className="text-text-dim leading-relaxed text-sm sm:text-base relative z-10">
         {service.description}
       </p>
       {/* Gradient border on hover */}
