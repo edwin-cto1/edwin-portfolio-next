@@ -1,18 +1,20 @@
+import { ExperienceIcon, DeployIcon, TrustIcon } from './icons'
+
 const values = [
   {
-    icon: '⚡',
+    Icon: ExperienceIcon,
     title: '10+ Years Enterprise Experience',
     description:
       'Proven track record delivering mission-critical systems across startups and Fortune 500 organizations.',
   },
   {
-    icon: '🎯',
+    Icon: DeployIcon,
     title: '50+ Successful Deployments',
     description:
       'From MVP launches to large-scale enterprise migrations, with a relentless focus on quality and reliability.',
   },
   {
-    icon: '🌐',
+    Icon: TrustIcon,
     title: 'Trusted by Startups to Enterprise',
     description:
       'Flexible engagement models that scale with your needs — fractional, project-based, or embedded.',
@@ -54,8 +56,8 @@ export default function WhyCTO1() {
               key={v.title}
               className="glass-card rounded-2xl p-8 text-center hover:border-electric-blue/30 transition-all duration-300"
             >
-              <div className="text-4xl mb-4" aria-hidden="true">
-                {v.icon}
+              <div className="mb-5 flex justify-center" aria-hidden="true">
+                <v.Icon size={44} className="drop-shadow-[0_0_8px_rgba(0,212,255,0.4)]" />
               </div>
               <h3 className="font-orbitron text-base font-bold text-text-primary mb-3">
                 {v.title}

@@ -1,46 +1,54 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import {
+  EnterpriseArchIcon,
+  AIMLIcon,
+  SaaSIcon,
+  CloudIcon,
+  EcommerceIcon,
+  CTOAdvisoryIcon,
+} from './icons'
 
 const services = [
   {
     id: 'enterprise-architecture',
-    icon: '🏗️',
+    Icon: EnterpriseArchIcon,
     title: 'Enterprise Architecture',
     description:
       'Designing scalable, resilient systems that power Fortune 500 operations. From microservices to monolith migrations.',
   },
   {
     id: 'ai-machine-learning',
-    icon: '🤖',
+    Icon: AIMLIcon,
     title: 'AI & Machine Learning',
     description:
       'Custom ML models, intelligent automation, and AI-powered decision systems that drive measurable ROI.',
   },
   {
     id: 'saas-development',
-    icon: '💻',
+    Icon: SaaSIcon,
     title: 'SaaS Development',
     description:
       'End-to-end SaaS platform engineering — from MVP to enterprise-grade multi-tenant architecture.',
   },
   {
     id: 'it-infrastructure-cloud',
-    icon: '☁️',
+    Icon: CloudIcon,
     title: 'IT Infrastructure & Cloud',
     description:
       'AWS, Azure, GCP architecture and DevOps pipelines. Zero-downtime migrations and infrastructure modernization.',
   },
   {
     id: 'ecommerce-solutions',
-    icon: '🛒',
+    Icon: EcommerceIcon,
     title: 'eCommerce Solutions',
     description:
       'High-performance eCommerce platforms built for conversion. Headless commerce, payment integrations, and scale.',
   },
   {
     id: 'cto-advisory',
-    icon: '🚀',
+    Icon: CTOAdvisoryIcon,
     title: 'CTO Advisory',
     description:
       'Fractional CTO services for startups and enterprises. Technology strategy, team building, and engineering culture.',
@@ -89,11 +97,8 @@ function ServiceCard({ service, index }: ServiceCardProps) {
         transition: `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s, border-color 0.3s, background-color 0.3s`,
       }}
     >
-      <div
-        className="text-3xl mb-4 inline-block"
-        aria-hidden="true"
-      >
-        {service.icon}
+      <div className="mb-5 inline-block" aria-hidden="true">
+        <service.Icon size={52} className="drop-shadow-[0_0_8px_rgba(0,212,255,0.5)]" />
       </div>
       <h3
         id={`service-title-${service.id}`}

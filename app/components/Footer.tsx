@@ -49,7 +49,7 @@ export default function Footer() {
             &copy; {currentYear} CTO1. All rights reserved. | Built
             with{' '}
             <span aria-label="lightning bolt" role="img">
-              ⚡
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" style={{display:'inline',verticalAlign:'middle'}}><path d="M8 1L3 8h4l-1 5 6-7H8l1-5z" fill="url(#bolt-grad)"/><defs><linearGradient id="bolt-grad" x1="0" y1="0" x2="14" y2="14"><stop stopColor="#00D4FF"/><stop offset="1" stopColor="#8B00FF"/></linearGradient></defs></svg>
             </span>{' '}
             by Edwin Portillo
           </p>
