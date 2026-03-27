@@ -1,19 +1,22 @@
 const technologies = [
   'Python',
-  'JavaScript',
   'TypeScript',
   'React',
+  'Next.js',
   'Node.js',
   'AWS',
   'Azure',
+  'GCP',
   'Docker',
   'Kubernetes',
   'TensorFlow',
   'PostgreSQL',
+  'MongoDB',
   'Redis',
   'GraphQL',
-  'C++',
-  'OpenCV',
+  'Stripe',
+  'Shopify',
+  'Salesforce',
 ]
 
 export default function TechStack() {
@@ -70,7 +73,7 @@ export default function TechStack() {
 
         <ul
           className="flex gap-6 animate-ticker w-max"
-          aria-label="Technologies: Python, JavaScript, TypeScript, React, Node.js, AWS, Azure, Docker, Kubernetes, TensorFlow, PostgreSQL, Redis, GraphQL, C++, OpenCV"
+          aria-label="Technologies: Python, TypeScript, React, Next.js, Node.js, AWS, Azure, GCP, Docker, Kubernetes, TensorFlow, PostgreSQL, MongoDB, Redis, GraphQL, Stripe, Shopify, Salesforce"
           style={{ animationDuration: '30s' }}
         >
           {tickerItems.map((tech, i) => (

@@ -30,34 +30,29 @@ describe('Hero', () => {
   it('renders the main heading', () => {
     render(<Hero />)
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      'EDWIN PORTILLO'
+      /Enterprise Technology/i
     )
   })
 
   it('renders the eyebrow text', () => {
     render(<Hero />)
-    expect(screen.getByText(/Tech Leader/i)).toBeInTheDocument()
-  })
-
-  it('renders the tagline', () => {
-    render(<Hero />)
     expect(
-      screen.getByText(/Building the technology infrastructure/i)
+      screen.getByText(/Enterprise Technology Leadership/i)
     ).toBeInTheDocument()
   })
 
-  it('renders View Services CTA link', () => {
+  it('renders Explore Services CTA link', () => {
     render(<Hero />)
-    const link = screen.getByRole('link', { name: /view services/i })
+    const link = screen.getByRole('link', { name: /explore services/i })
     expect(link).toBeInTheDocument()
     expect(link).toHaveAttribute('href', '#services')
   })
 
-  it('renders LinkedIn Profile CTA link', () => {
+  it('renders Get in Touch CTA link', () => {
     render(<Hero />)
-    const link = screen.getByRole('link', { name: /linkedin profile/i })
+    const link = screen.getByRole('link', { name: /get in touch/i })
     expect(link).toBeInTheDocument()
-    expect(link).toHaveAttribute('href', 'https://linkedin.com/in/csedwin')
+    expect(link).toHaveAttribute('href', '#contact')
   })
 
   it('renders the hero section with id', () => {

@@ -6,8 +6,17 @@ import Link from 'next/link'
 const stats = [
   { value: 10, suffix: '+', label: 'Years Experience' },
   { value: 50, suffix: '+', label: 'Projects Delivered' },
-  { value: 15, suffix: '+', label: 'Technologies Mastered' },
-  { value: 3, suffix: '', label: 'Industry Domains' },
+  { value: 15, suffix: '+', label: 'Technologies' },
+]
+
+const expertiseTags = [
+  'Enterprise Architecture',
+  'AI/ML',
+  'Cloud Infrastructure',
+  'SaaS',
+  'eCommerce',
+  'Technical Leadership',
+  'Team Building',
 ]
 
 function useCountUp(target: number, duration = 1500, enabled = false) {
@@ -91,22 +100,22 @@ export default function About() {
       />
 
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+        {/* Hero header */}
         <div className="text-center mb-16">
           <p className="font-space-grotesk text-sm font-semibold tracking-[0.3em] uppercase text-electric-blue mb-3">
-            About Me
+            Founder &amp; CTO, CTO1
           </p>
           <h2
             id="about-heading"
             className="font-orbitron text-3xl sm:text-4xl md:text-5xl font-bold gradient-text"
           >
-            About
+            Meet Edwin Portillo
           </h2>
         </div>
 
         {/* Stats */}
         <div
-          className="glass-card rounded-2xl mb-16 grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/8"
+          className="glass-card rounded-2xl mb-16 grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/8"
           aria-label="Key statistics"
         >
           {stats.map((stat) => (
@@ -115,29 +124,34 @@ export default function About() {
         </div>
 
         {/* Content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Bio */}
           <div className="space-y-6">
             <p className="text-text-dim leading-relaxed text-base sm:text-lg">
-              Tech visionary with expertise spanning software architecture, AI/ML
-              systems, and autonomous robotics. I bring a rare combination of
-              deep technical knowledge and strategic leadership to every
-              engagement — designing systems that are not just functional, but
-              future-proof.
+              Edwin Portillo is a seasoned technology leader with over a decade
+              of experience architecting enterprise-grade systems and leading
+              high-performance engineering teams. As the founder of{' '}
+              <span className="text-electric-blue font-semibold">CTO1</span>,
+              Edwin brings deep technical expertise across AI/ML, cloud
+              infrastructure, SaaS development, and eCommerce to organizations
+              looking to transform their technology capabilities.
             </p>
             <p className="text-text-dim leading-relaxed text-base sm:text-lg">
-              Currently driving innovation at{' '}
-              <span className="text-electric-blue font-semibold">Comfrt</span>,
-              Edwin has a rich background in Systems Engineering, having designed
-              and built mission-critical platforms across defense, aerospace, and
-              consumer technology sectors.
+              With a background in Systems Engineering and a career spanning
+              startups to enterprise organizations, Edwin has a proven track
+              record of delivering scalable solutions that drive business
+              outcomes. His approach combines strategic vision with hands-on
+              technical execution.
             </p>
-            <p className="text-text-dim leading-relaxed text-base sm:text-lg">
-              Fluent in English and Spanish, Edwin excels at bridging technical
-              and business communication — whether mentoring engineering teams,
-              presenting to executives, or collaborating with cross-functional
-              stakeholders across the globe.
-            </p>
+
+            {/* Education */}
+            <div className="glass-card rounded-xl p-4 flex items-center gap-3">
+              <span className="text-2xl" aria-hidden="true">🎓</span>
+              <div>
+                <p className="text-text-primary font-semibold text-sm">Education</p>
+                <p className="text-text-dim text-sm">Systems Engineering</p>
+              </div>
+            </div>
 
             <div className="pt-4">
               <Link
@@ -145,9 +159,9 @@ export default function About() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="gradient-bg text-white font-semibold px-8 py-3.5 rounded-full text-base hover:opacity-90 transition-all duration-200 inline-flex items-center gap-2"
-                aria-label="View Edwin Portillo's LinkedIn profile"
+                aria-label="Connect with Edwin Portillo on LinkedIn"
               >
-                <span>View LinkedIn Profile</span>
+                <span>Connect on LinkedIn</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -162,11 +176,11 @@ export default function About() {
             </div>
           </div>
 
-          {/* Visual accent */}
-          <div className="relative hidden lg:flex items-center justify-center">
+          {/* Profile card with expertise tags */}
+          <div className="relative hidden lg:flex items-start justify-center">
             <div
               aria-hidden="true"
-              className="absolute w-72 h-72 rounded-full"
+              className="absolute w-72 h-72 rounded-full top-0"
               style={{
                 background:
                   'radial-gradient(circle, rgba(0,212,255,0.08) 0%, rgba(139,0,255,0.08) 50%, transparent 70%)',
@@ -175,31 +189,29 @@ export default function About() {
             <div className="relative glass-card rounded-3xl p-8 space-y-4 max-w-sm w-full">
               <div className="flex items-center gap-3 mb-6">
                 <div
-                  className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center font-orbitron font-bold text-white text-lg"
+                  className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center font-orbitron font-bold text-white text-sm"
                   aria-hidden="true"
                 >
                   EP
                 </div>
                 <div>
                   <p className="font-semibold text-text-primary">Edwin Portillo</p>
-                  <p className="text-text-dim text-sm">Software Architect</p>
+                  <p className="text-text-dim text-sm">Founder &amp; CTO, CTO1</p>
                 </div>
               </div>
-              {[
-                'Software Architecture',
-                'AI / ML Engineering',
-                'Cloud Infrastructure',
-                'Systems Engineering',
-                'Technical Leadership',
-              ].map((skill) => (
-                <div key={skill} className="flex items-center gap-3">
-                  <div
-                    className="w-2 h-2 rounded-full bg-electric-blue flex-shrink-0"
-                    aria-hidden="true"
-                  />
-                  <span className="text-text-dim text-sm">{skill}</span>
-                </div>
-              ))}
+              <p className="text-text-dim text-xs uppercase tracking-widest font-semibold mb-3">
+                Expertise
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {expertiseTags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="glass-card rounded-full px-3 py-1 text-xs text-text-dim font-medium border border-electric-blue/20"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

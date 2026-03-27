@@ -25,14 +25,14 @@ describe('Footer', () => {
     expect(screen.getByRole('contentinfo')).toBeInTheDocument()
   })
 
-  it('renders the EP logo link', () => {
+  it('renders the CTO1 logo link', () => {
     render(<Footer />)
-    expect(screen.getByText('EP')).toBeInTheDocument()
+    expect(screen.getByText('CTO1')).toBeInTheDocument()
   })
 
   it('renders copyright text', () => {
     render(<Footer />)
-    expect(screen.getByText(/Edwin Portillo\. All rights reserved\./i)).toBeInTheDocument()
+    expect(screen.getByText(/CTO1\. All rights reserved\./i)).toBeInTheDocument()
   })
 
   it('renders the current year in copyright', () => {

@@ -21,49 +21,51 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Edwin Portillo | Software Architect & Tech Leader',
+  title: 'CTO1 | Enterprise Technology Services',
   description:
-    'Edwin Portillo — Software Architect, AI/ML Engineer, and Tech Leader building the technology infrastructure of tomorrow.',
+    'CTO1 delivers enterprise technology solutions including AI/ML, cloud infrastructure, SaaS development, eCommerce, and CTO advisory services.',
   keywords: [
-    'Software Architect',
-    'AI/ML Engineer',
-    'Tech Leader',
-    'Systems Engineer',
+    'Enterprise Technology',
+    'CTO Advisory',
+    'AI/ML',
+    'SaaS Development',
     'Cloud Infrastructure',
+    'eCommerce',
+    'Enterprise Architecture',
     'Edwin Portillo',
-    'Drone Systems',
-    'Robotics',
+    'CTO1',
     'AWS',
     'Azure',
+    'GCP',
   ],
   authors: [{ name: 'Edwin Portillo' }],
   creator: 'Edwin Portillo',
-  metadataBase: new URL('https://edwinportillo.dev'),
+  metadataBase: new URL('https://cto1.tech'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://edwinportillo.dev',
-    siteName: 'Edwin Portillo Portfolio',
-    title: 'Edwin Portillo | Software Architect & Tech Leader',
+    url: 'https://cto1.tech',
+    siteName: 'CTO1',
+    title: 'CTO1 | Enterprise Technology Services',
     description:
-      'Edwin Portillo — Software Architect, AI/ML Engineer, and Tech Leader building the technology infrastructure of tomorrow.',
+      'CTO1 delivers enterprise technology solutions including AI/ML, cloud infrastructure, SaaS development, eCommerce, and CTO advisory services.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Edwin Portillo - Software Architect & Tech Leader',
+        alt: 'CTO1 - Enterprise Technology Services',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Edwin Portillo | Software Architect & Tech Leader',
+    title: 'CTO1 | Enterprise Technology Services',
     description:
-      'Edwin Portillo — Software Architect, AI/ML Engineer, and Tech Leader building the technology infrastructure of tomorrow.',
+      'CTO1 delivers enterprise technology solutions including AI/ML, cloud infrastructure, SaaS development, eCommerce, and CTO advisory services.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -81,30 +83,13 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Edwin Portillo',
-  url: 'https://edwinportillo.dev',
-  sameAs: ['https://linkedin.com/in/csedwin'],
-  jobTitle: 'Software Architect & Tech Leader',
+  '@type': 'Organization',
+  name: 'CTO1',
+  founder: { '@type': 'Person', name: 'Edwin Portillo' },
+  url: 'https://cto1.tech',
   description:
-    'Tech visionary with expertise spanning software architecture, AI/ML systems, and autonomous robotics.',
-  knowsAbout: [
-    'Software Architecture',
-    'AI/ML Engineering',
-    'Cloud Infrastructure',
-    'Systems Engineering',
-    'Technical Leadership',
-    'Drone & Robotics Systems',
-  ],
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Comfrt',
-  },
-  alumniOf: [],
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'US',
-  },
+    'Enterprise technology services — AI/ML, SaaS, cloud infrastructure, eCommerce',
+  sameAs: ['https://linkedin.com/in/csedwin'],
 }
 
 export default function RootLayout({

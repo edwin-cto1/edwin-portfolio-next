@@ -21,9 +21,9 @@ jest.mock('next/link', () => {
 })
 
 describe('Navbar', () => {
-  it('renders the EP logo', () => {
+  it('renders the CTO1 logo', () => {
     render(<Navbar />)
-    expect(screen.getByText('EP')).toBeInTheDocument()
+    expect(screen.getByText('CTO1')).toBeInTheDocument()
   })
 
   it('renders all desktop nav links', () => {
@@ -40,14 +40,11 @@ describe('Navbar', () => {
     expect(contactLinks.length).toBeGreaterThanOrEqual(1)
   })
 
-  it('renders Hire Me links', () => {
+  it('renders Get in Touch links', () => {
     render(<Navbar />)
-    const hireMeLinks = screen.getAllByRole('link', { name: /hire me/i })
-    expect(hireMeLinks.length).toBeGreaterThanOrEqual(1)
-    expect(hireMeLinks[0]).toHaveAttribute(
-      'href',
-      'https://linkedin.com/in/csedwin'
-    )
+    const getInTouchLinks = screen.getAllByRole('link', { name: /get in touch/i })
+    expect(getInTouchLinks.length).toBeGreaterThanOrEqual(1)
+    expect(getInTouchLinks[0]).toHaveAttribute('href', '#contact')
   })
 
   it('renders the hamburger toggle button', () => {

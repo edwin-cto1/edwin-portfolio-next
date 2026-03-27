@@ -22,7 +22,9 @@ jest.mock('next/link', () => {
 describe('About', () => {
   it('renders the about section heading', () => {
     render(<About />)
-    expect(screen.getByRole('heading', { name: /about/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /Edwin Portillo/i })
+    ).toBeInTheDocument()
   })
 
   it('renders Years Experience stat label', () => {
@@ -35,25 +37,21 @@ describe('About', () => {
     expect(screen.getByText(/Projects Delivered/i)).toBeInTheDocument()
   })
 
-  it('renders Technologies Mastered stat label', () => {
+  it('renders Technologies stat label', () => {
     render(<About />)
-    expect(screen.getByText(/Technologies Mastered/i)).toBeInTheDocument()
+    expect(screen.getByText(/^Technologies$/i)).toBeInTheDocument()
   })
 
-  it('renders Industry Domains stat label', () => {
+  it('renders bio text mentioning CTO1', () => {
     render(<About />)
-    expect(screen.getByText(/Industry Domains/i)).toBeInTheDocument()
+    const cto1Elements = screen.getAllByText(/CTO1/i)
+    expect(cto1Elements.length).toBeGreaterThanOrEqual(1)
   })
 
-  it('renders bio text mentioning Comfrt', () => {
-    render(<About />)
-    expect(screen.getByText(/Comfrt/i)).toBeInTheDocument()
-  })
-
-  it('renders LinkedIn profile link', () => {
+  it('renders Connect on LinkedIn link', () => {
     render(<About />)
     const link = screen.getByRole('link', {
-      name: /View Edwin Portillo's LinkedIn profile/i,
+      name: /Connect with Edwin Portillo on LinkedIn/i,
     })
     expect(link).toHaveAttribute('href', 'https://linkedin.com/in/csedwin')
   })

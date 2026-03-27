@@ -4,46 +4,46 @@ import { useEffect, useRef, useState } from 'react'
 
 const services = [
   {
-    id: 'software-architecture',
+    id: 'enterprise-architecture',
     icon: '🏗️',
-    title: 'Software Architecture',
+    title: 'Enterprise Architecture',
     description:
-      'Designing scalable, resilient systems from the ground up. Microservices, event-driven architecture, and distributed systems that grow with your business.',
+      'Designing scalable, resilient systems that power Fortune 500 operations. From microservices to monolith migrations.',
   },
   {
-    id: 'ai-ml-engineering',
+    id: 'ai-machine-learning',
     icon: '🤖',
-    title: 'AI / ML Engineering',
+    title: 'AI & Machine Learning',
     description:
-      'Machine learning models and intelligent automation solutions. Computer vision, object recognition, and production-grade ML pipelines that deliver real results.',
+      'Custom ML models, intelligent automation, and AI-powered decision systems that drive measurable ROI.',
   },
   {
-    id: 'cloud-infrastructure',
+    id: 'saas-development',
+    icon: '💻',
+    title: 'SaaS Development',
+    description:
+      'End-to-end SaaS platform engineering — from MVP to enterprise-grade multi-tenant architecture.',
+  },
+  {
+    id: 'it-infrastructure-cloud',
     icon: '☁️',
-    title: 'Cloud Infrastructure',
+    title: 'IT Infrastructure & Cloud',
     description:
-      'AWS & Azure cloud architecture, containerization with Docker & Kubernetes, CI/CD pipelines, and infrastructure-as-code for rock-solid deployments.',
+      'AWS, Azure, GCP architecture and DevOps pipelines. Zero-downtime migrations and infrastructure modernization.',
   },
   {
-    id: 'systems-engineering',
-    icon: '⚙️',
-    title: 'Systems Engineering',
+    id: 'ecommerce-solutions',
+    icon: '🛒',
+    title: 'eCommerce Solutions',
     description:
-      'End-to-end systems design and integration. From hardware interfaces to software stacks — building cohesive, reliable systems with meticulous attention to requirements.',
+      'High-performance eCommerce platforms built for conversion. Headless commerce, payment integrations, and scale.',
   },
   {
-    id: 'technical-leadership',
+    id: 'cto-advisory',
     icon: '🚀',
-    title: 'Technical Leadership',
+    title: 'CTO Advisory',
     description:
-      'CTO advisory, engineering team building, and culture development. Aligning technical strategy with business goals while mentoring high-performance engineering organizations.',
-  },
-  {
-    id: 'drone-robotics',
-    icon: '🚁',
-    title: 'Drone & Robotics Systems',
-    description:
-      'Autonomous systems engineering, ground control station development, and computer vision for robotics. Real-world experience building drone GCS with AI-powered object recognition.',
+      'Fractional CTO services for startups and enterprises. Technology strategy, team building, and engineering culture.',
   },
 ]
 

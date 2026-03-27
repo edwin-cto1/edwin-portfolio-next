@@ -13,34 +13,34 @@ describe('Services', () => {
     expect(articles).toHaveLength(6)
   })
 
-  it('renders Software Architecture service', () => {
+  it('renders Enterprise Architecture service', () => {
     render(<Services />)
-    expect(screen.getByText('Software Architecture')).toBeInTheDocument()
+    expect(screen.getByText('Enterprise Architecture')).toBeInTheDocument()
   })
 
-  it('renders AI / ML Engineering service', () => {
+  it('renders AI & Machine Learning service', () => {
     render(<Services />)
-    expect(screen.getByText('AI / ML Engineering')).toBeInTheDocument()
+    expect(screen.getByText('AI & Machine Learning')).toBeInTheDocument()
   })
 
-  it('renders Cloud Infrastructure service', () => {
+  it('renders SaaS Development service', () => {
     render(<Services />)
-    expect(screen.getByText('Cloud Infrastructure')).toBeInTheDocument()
+    expect(screen.getByText('SaaS Development')).toBeInTheDocument()
   })
 
-  it('renders Systems Engineering service', () => {
+  it('renders IT Infrastructure & Cloud service', () => {
     render(<Services />)
-    expect(screen.getByText('Systems Engineering')).toBeInTheDocument()
+    expect(screen.getByText('IT Infrastructure & Cloud')).toBeInTheDocument()
   })
 
-  it('renders Technical Leadership service', () => {
+  it('renders eCommerce Solutions service', () => {
     render(<Services />)
-    expect(screen.getByText('Technical Leadership')).toBeInTheDocument()
+    expect(screen.getByText('eCommerce Solutions')).toBeInTheDocument()
   })
 
-  it('renders Drone & Robotics Systems service', () => {
+  it('renders CTO Advisory service', () => {
     render(<Services />)
-    expect(screen.getByText('Drone & Robotics Systems')).toBeInTheDocument()
+    expect(screen.getByText('CTO Advisory')).toBeInTheDocument()
   })
 
   it('has services section id', () => {

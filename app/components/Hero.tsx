@@ -5,10 +5,12 @@ import Link from 'next/link'
 import ParticleBackground from './ParticleBackground'
 
 const TYPING_WORDS = [
-  'Software Architect',
-  'Tech Leader',
-  'Systems Engineer',
-  'AI/ML Engineer',
+  'CTO Advisory',
+  'AI & Machine Learning',
+  'Enterprise Architecture',
+  'SaaS Development',
+  'IT Infrastructure',
+  'eCommerce Solutions',
 ]
 
 export default function Hero() {
@@ -96,17 +98,17 @@ export default function Hero() {
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto">
         {/* Eyebrow */}
         <p className="font-space-grotesk text-sm font-semibold tracking-[0.3em] uppercase mb-6 text-electric-blue">
-          Tech Leader &amp; Architect
+          Enterprise Technology Leadership &amp; Solutions
         </p>
 
         {/* Main heading */}
-        <h1 className="font-orbitron text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black gradient-text mb-6 leading-none tracking-wide">
-          EDWIN PORTILLO
+        <h1 className="font-orbitron text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black gradient-text mb-6 leading-tight tracking-wide">
+          Enterprise Technology.<br />Engineered for Scale.
         </h1>
 
         {/* Typing animation */}
         <div
-          className="font-space-grotesk text-xl sm:text-2xl md:text-3xl text-text-dim mb-8 min-h-[2.5rem] flex items-center justify-center"
+          className="font-space-grotesk text-xl sm:text-2xl md:text-3xl text-text-dim mb-12 min-h-[2.5rem] flex items-center justify-center"
           aria-live="polite"
           aria-atomic="true"
         >
@@ -117,26 +119,19 @@ export default function Hero() {
           />
         </div>
 
-        {/* Tagline */}
-        <p className="font-space-grotesk text-base sm:text-lg text-text-dim max-w-2xl mx-auto mb-12 leading-relaxed">
-          Building the technology infrastructure of tomorrow
-        </p>
-
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="#services"
             className="gradient-bg text-white font-semibold px-8 py-3.5 rounded-full text-base hover:opacity-90 transition-all duration-200 hover:shadow-lg hover:shadow-electric-blue/20 w-full sm:w-auto text-center"
           >
-            View Services
+            Explore Services
           </Link>
           <Link
-            href="https://linkedin.com/in/csedwin"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
             className="glass-card border border-electric-blue/30 text-text-primary font-semibold px-8 py-3.5 rounded-full text-base hover:border-electric-blue/60 hover:bg-white/5 transition-all duration-200 w-full sm:w-auto text-center"
           >
-            LinkedIn Profile
+            Get in Touch
           </Link>
         </div>
       </div>

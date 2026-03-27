@@ -18,19 +18,35 @@ export default function Footer() {
       />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <Link
             href="#hero"
             className="font-orbitron text-xl font-bold gradient-text hover:opacity-80 transition-opacity"
-            aria-label="Edwin Portillo - Back to top"
+            aria-label="CTO1 - Back to top"
           >
-            EP
+            CTO1
           </Link>
+
+          {/* Links */}
+          <div className="flex items-center gap-6 text-sm">
+            <Link
+              href="/about"
+              className="text-text-dim hover:text-text-primary transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              href="#contact"
+              className="text-text-dim hover:text-text-primary transition-colors"
+            >
+              Contact
+            </Link>
+          </div>
 
           {/* Copyright */}
           <p className="text-text-dim text-sm text-center">
-            &copy; {currentYear} Edwin Portillo. All rights reserved. | Built
+            &copy; {currentYear} CTO1. All rights reserved. | Built
             with{' '}
             <span aria-label="lightning bolt" role="img">
               ⚡

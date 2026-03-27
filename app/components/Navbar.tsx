@@ -6,7 +6,7 @@ import Link from 'next/link'
 const navLinks = [
   { label: 'Home', href: '#hero' },
   { label: 'Services', href: '#services' },
-  { label: 'About', href: '#about' },
+  { label: 'About', href: '/about' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -83,9 +83,9 @@ export default function Navbar() {
           <Link
             href="#hero"
             className="font-orbitron text-2xl font-bold gradient-text hover:opacity-80 transition-opacity"
-            aria-label="Edwin Portillo - Home"
+            aria-label="CTO1 - Home"
           >
-            EP
+            CTO1
           </Link>
 
           {/* Desktop Nav */}
@@ -105,12 +105,10 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center">
             <Link
-              href="https://linkedin.com/in/csedwin"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="gradient-bg text-white font-semibold px-5 py-2 rounded-full text-sm hover:opacity-90 transition-opacity"
             >
-              Hire Me
+              Get in Touch
             </Link>
           </div>
 
@@ -168,13 +166,11 @@ export default function Navbar() {
           ))}
           <li className="pt-2">
             <Link
-              href="https://linkedin.com/in/csedwin"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               onClick={closeMenu}
               className="block gradient-bg text-white font-semibold px-5 py-2.5 rounded-full text-sm text-center hover:opacity-90 transition-opacity"
             >
-              Hire Me
+              Get in Touch
             </Link>
           </li>
         </ul>
