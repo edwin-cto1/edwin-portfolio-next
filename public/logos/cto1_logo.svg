@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="100" viewBox="0 0 420 100">
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="80" viewBox="0 0 380 80">
   <defs>
     <linearGradient id="main-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#00D4FF"/>
@@ -18,8 +18,8 @@
     </filter>
   </defs>
 
-  <!-- ICON MARK -->
-  <g transform="translate(10, 10)">
+  <!-- ICON MARK (scaled to 80x80 viewport) -->
+  <g transform="translate(4, 4) scale(0.9)">
     <path d="M 67 15 A 32 32 0 1 0 67 65"
           stroke="url(#main-grad)" stroke-width="1.5" fill="none"
           stroke-linecap="round" opacity="0.4"/>
@@ -44,19 +44,21 @@
     <line x1="73" y1="59" x2="50" y2="69" stroke="url(#main-grad)" stroke-width="0.8" stroke-opacity="0.25"/>
   </g>
 
-  <!-- WORDMARK — shifted right with more room -->
-  <g transform="translate(110, 0)">
-    <text x="0" y="58"
+  <!-- WORDMARK — bigger, bolder -->
+  <g transform="translate(88, 0)">
+    <!-- CTO1 — larger font -->
+    <text x="0" y="52"
           font-family="Arial Black, Helvetica Neue, sans-serif"
           font-weight="900"
-          font-size="44"
-          letter-spacing="-1"
+          font-size="52"
+          letter-spacing="-2"
           fill="white">CTO<tspan fill="url(#text-grad)">1</tspan></text>
-    <text x="2" y="76"
+    <!-- Tagline — slightly larger and more visible -->
+    <text x="3" y="68"
           font-family="Arial, Helvetica, sans-serif"
-          font-size="8.5"
-          letter-spacing="3.5"
-          fill="#6B6B8B"
-          font-weight="400">CORE TECHNOLOGY ORCHESTRATION</text>
+          font-size="9.5"
+          letter-spacing="3"
+          fill="#6B6B9B"
+          font-weight="500">CORE TECHNOLOGY ORCHESTRATION</text>
   </g>
 </svg>
