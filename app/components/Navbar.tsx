@@ -2,19 +2,22 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
-
-const navLinks = [
-  { label: 'Home', href: '#hero' },
-  { label: 'Services', href: '#services' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '#contact' },
-]
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
   const hamburgerRef = useRef<HTMLButtonElement>(null)
+  const pathname = usePathname()
+  const p = pathname === '/' ? '' : '/'
+
+  const navLinks = [
+    { label: 'Home', href: `${p}#hero` },
+    { label: 'Services', href: `${p}#services` },
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: `${p}#contact` },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -111,7 +114,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center">
             <Link
-              href="#contact"
+              href={`${p}#contact`}
               className="gradient-bg text-white font-semibold px-5 py-2 rounded-full text-sm hover:opacity-90 transition-opacity"
             >
               Get in Touch
@@ -172,7 +175,7 @@ export default function Navbar() {
           ))}
           <li className="pt-2">
             <Link
-              href="#contact"
+              href={`${p}#contact`}
               onClick={closeMenu}
               className="block gradient-bg text-white font-semibold px-5 py-2.5 rounded-full text-sm text-center hover:opacity-90 transition-opacity"
             >

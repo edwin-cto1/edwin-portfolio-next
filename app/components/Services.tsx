@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 import {
   EnterpriseArchIcon,
   AIMLIcon,
@@ -113,6 +114,16 @@ function ServiceCard({ service, index }: ServiceCardProps) {
       <p className="text-text-dim leading-relaxed text-sm sm:text-base relative z-10">
         {service.description}
       </p>
+      <Link
+        href={`/services/${service.id}`}
+        className="inline-flex items-center gap-1.5 text-electric-blue text-sm font-semibold mt-4 relative z-10 hover:opacity-70 transition-opacity focus:outline-none focus:underline"
+        aria-label={`Learn more about ${service.title}`}
+      >
+        Learn More
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </Link>
       {/* Gradient border on hover */}
       <div
         aria-hidden="true"
