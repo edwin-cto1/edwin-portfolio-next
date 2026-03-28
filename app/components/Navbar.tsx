@@ -7,8 +7,10 @@ import { usePathname } from 'next/navigation'
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [resourcesOpen, setResourcesOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
   const hamburgerRef = useRef<HTMLButtonElement>(null)
+  const resourcesRef = useRef<HTMLLIElement>(null)
   const pathname = usePathname()
   const p = pathname === '/' ? '' : '/'
 
@@ -19,6 +21,11 @@ export default function Navbar() {
     { label: 'Contact', href: `${p}#contact` },
   ]
 
+  const resourceLinks = [
+    { label: 'Blog', href: '/blog', description: 'Technology insights & guides' },
+    { label: 'Case Studies', href: '/case-studies', description: 'Real results from real projects' },
+  ]
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
@@ -26,6 +33,18 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Close resources dropdown on outside click
+  useEffect(() => {
+    if (!resourcesOpen) return
+    const handleClick = (e: MouseEvent) => {
+      if (resourcesRef.current && !resourcesRef.current.contains(e.target as Node)) {  // eslint-disable-line @typescript-eslint/no-explicit-any
+        setResourcesOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [resourcesOpen])
 
   // Focus trap for mobile menu
   useEffect(() => {
@@ -109,6 +128,49 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            {/* Resources Dropdown */}
+            <li ref={resourcesRef} className="relative">
+              <button
+                onClick={() => setResourcesOpen((prev) => !prev)}
+                aria-expanded={resourcesOpen}
+                aria-haspopup="true"
+                className="flex items-center gap-1 text-text-dim hover:text-text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-electric-blue rounded"
+              >
+                Resources
+                <svg
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${resourcesOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {resourcesOpen && (
+                <div
+                  role="menu"
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 glass-card rounded-xl overflow-hidden shadow-xl shadow-black/30 border border-white/10"
+                >
+                  {resourceLinks.map((link) => (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      role="menuitem"
+                      onClick={() => setResourcesOpen(false)}
+                      className="block px-5 py-3.5 hover:bg-white/5 transition-colors"
+                    >
+                      <span className="block text-text-primary font-medium text-sm font-space-grotesk">
+                        {link.label}
+                      </span>
+                      <span className="block text-text-dim text-xs font-space-grotesk mt-0.5">
+                        {link.description}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </li>
           </ul>
 
           {/* Desktop CTA */}
@@ -173,6 +235,25 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          {/* Resources section in mobile menu */}
+          <li>
+            <p className="text-text-dim/50 text-xs uppercase tracking-widest font-space-grotesk py-1">
+              Resources
+            </p>
+            <ul className="list-none pl-2 space-y-1">
+              {resourceLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    onClick={closeMenu}
+                    className="block text-text-dim hover:text-text-primary transition-colors duration-200 font-medium text-base py-1.5"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
           <li className="pt-2">
             <Link
               href={`${p}#contact`}
