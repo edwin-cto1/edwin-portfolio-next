@@ -235,7 +235,7 @@ export default function Contact() {
                       aria-describedby={errors.name ? 'name-error' : undefined}
                       aria-invalid={!!errors.name}
                       placeholder="Your full name"
-                      className="w-full bg-white/4 border border-white/10 rounded-xl px-4 py-3 text-text-primary placeholder:text-text-dim/50 focus:outline-none focus:border-electric-blue/60 focus:ring-1 focus:ring-electric-blue/40 transition-colors"
+                      className="w-full bg-white/4 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-electric-blue/60 focus:ring-1 focus:ring-electric-blue/40 transition-colors"
                     />
                     {errors.name && (
                       <p
@@ -269,7 +269,7 @@ export default function Contact() {
                       }
                       aria-invalid={!!errors.email}
                       placeholder="your@email.com"
-                      className="w-full bg-white/4 border border-white/10 rounded-xl px-4 py-3 text-text-primary placeholder:text-text-dim/50 focus:outline-none focus:border-electric-blue/60 focus:ring-1 focus:ring-electric-blue/40 transition-colors"
+                      className="w-full bg-white/4 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-electric-blue/60 focus:ring-1 focus:ring-electric-blue/40 transition-colors"
                     />
                     {errors.email && (
                       <p
@@ -302,7 +302,7 @@ export default function Contact() {
                       }
                       aria-invalid={!!errors.message}
                       placeholder="Tell me about your project..."
-                      className="w-full bg-white/4 border border-white/10 rounded-xl px-4 py-3 text-text-primary placeholder:text-text-dim/50 focus:outline-none focus:border-electric-blue/60 focus:ring-1 focus:ring-electric-blue/40 transition-colors resize-vertical"
+                      className="w-full bg-white/4 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-electric-blue/60 focus:ring-1 focus:ring-electric-blue/40 transition-colors resize-vertical"
                     />
                     {errors.message && (
                       <p
