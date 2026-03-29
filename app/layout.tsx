@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Orbitron, Space_Grotesk, Inter } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 
 const orbitron = Orbitron({
@@ -117,6 +118,7 @@ export default function RootLayout({
         </a>
         <div id="main-content">{children}</div>
       </body>
+      <GoogleAnalytics gaId="G-HQEG9ZZ2V8" />
     </html>
   )
 }
