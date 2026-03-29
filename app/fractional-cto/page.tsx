@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { RoadmapIcon, BlueprintIcon, TeamIcon, SecurityIcon, InvestorIcon, PartnerIcon } from '../components/icons'
 
 export const metadata: Metadata = {
   title: 'Fractional CTO Services | CTO1 — Expert Tech Leadership for Startups',
@@ -30,37 +31,37 @@ export const metadata: Metadata = {
 
 const included = [
   {
-    icon: '🗺',
+    Icon: RoadmapIcon,
     title: 'Technology Roadmap',
     description:
       'A prioritized 12–24 month technology roadmap aligned to your business goals, updated quarterly as your strategy evolves.',
   },
   {
-    icon: '🏗',
+    Icon: BlueprintIcon,
     title: 'Architecture Review & Design',
     description:
       'Ongoing architecture oversight: reviewing major decisions, guiding your team, and ensuring your system can scale.',
   },
   {
-    icon: '👥',
+    Icon: TeamIcon,
     title: 'Engineering Team Leadership',
     description:
       'Coaching your engineers, improving hiring standards, implementing engineering processes, and building team culture.',
   },
   {
-    icon: '🔒',
+    Icon: SecurityIcon,
     title: 'Security & Compliance',
     description:
       'Identifying security risks, guiding SOC 2 / GDPR readiness, and ensuring your architecture meets compliance requirements.',
   },
   {
-    icon: '💰',
+    Icon: InvestorIcon,
     title: 'Investor & Board Readiness',
     description:
       'Technical due diligence preparation, investor Q&A support, and translating your technology story for non-technical stakeholders.',
   },
   {
-    icon: '🤝',
+    Icon: PartnerIcon,
     title: 'Vendor & Partner Evaluation',
     description:
       'Evaluating technology vendors, cloud providers, and technical partners with an objective, senior perspective.',
@@ -256,8 +257,8 @@ export default function FractionalCTOPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {included.map((item) => (
                 <div key={item.title} className="glass-card rounded-2xl p-6">
-                  <div className="text-3xl mb-4" aria-hidden="true">
-                    {item.icon}
+                  <div className="mb-4">
+                    <item.Icon size={28} />
                   </div>
                   <h3 className="font-orbitron text-base font-bold text-text-primary mb-2">
                     {item.title}

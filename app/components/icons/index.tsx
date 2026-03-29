@@ -240,3 +240,220 @@ export function TrustIcon({ className = '', size = 40 }: IconProps) {
     </svg>
   )
 }
+
+// Technology Roadmap — horizontal path with waypoints and arrow
+export function RoadmapIcon({ className = '', size = 48 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="rm-grad" x1="0" y1="0" x2="48" y2="0" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#00D4FF"/>
+          <stop offset="1" stopColor="#8B00FF"/>
+        </linearGradient>
+      </defs>
+      {/* Main dashed path */}
+      <line x1="6" y1="24" x2="40" y2="24" stroke="url(#rm-grad)" strokeWidth="1.5" strokeDasharray="4 3"/>
+      {/* Arrow head */}
+      <polyline points="36,20 41,24 36,28" stroke="url(#rm-grad)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+      {/* Waypoint 1 */}
+      <circle cx="12" cy="24" r="4" fill="url(#rm-grad)" fillOpacity="0.9"/>
+      <circle cx="12" cy="24" r="2" fill="#050510"/>
+      {/* Waypoint 2 */}
+      <circle cx="24" cy="24" r="4" fill="url(#rm-grad)" fillOpacity="0.9"/>
+      <circle cx="24" cy="24" r="2" fill="#050510"/>
+      {/* Waypoint 3 */}
+      <circle cx="36" cy="24" r="4" fill="url(#rm-grad)" fillOpacity="0.9"/>
+      <circle cx="36" cy="24" r="2" fill="#050510"/>
+      {/* Tick labels */}
+      <line x1="12" y1="30" x2="12" y2="34" stroke="#00D4FF" strokeWidth="1" strokeOpacity="0.5"/>
+      <line x1="24" y1="30" x2="24" y2="34" stroke="url(#rm-grad)" strokeWidth="1" strokeOpacity="0.5"/>
+      <line x1="36" y1="30" x2="36" y2="34" stroke="#8B00FF" strokeWidth="1" strokeOpacity="0.5"/>
+    </svg>
+  )
+}
+
+// Architecture Review & Design — blueprint grid with central node
+export function BlueprintIcon({ className = '', size = 48 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="bp-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#00D4FF"/>
+          <stop offset="1" stopColor="#8B00FF"/>
+        </linearGradient>
+      </defs>
+      {/* Grid lines horizontal */}
+      <line x1="6" y1="12" x2="42" y2="12" stroke="url(#bp-grad)" strokeWidth="0.75" strokeOpacity="0.35"/>
+      <line x1="6" y1="24" x2="42" y2="24" stroke="url(#bp-grad)" strokeWidth="0.75" strokeOpacity="0.35"/>
+      <line x1="6" y1="36" x2="42" y2="36" stroke="url(#bp-grad)" strokeWidth="0.75" strokeOpacity="0.35"/>
+      {/* Grid lines vertical */}
+      <line x1="12" y1="6" x2="12" y2="42" stroke="url(#bp-grad)" strokeWidth="0.75" strokeOpacity="0.35"/>
+      <line x1="24" y1="6" x2="24" y2="42" stroke="url(#bp-grad)" strokeWidth="0.75" strokeOpacity="0.35"/>
+      <line x1="36" y1="6" x2="36" y2="42" stroke="url(#bp-grad)" strokeWidth="0.75" strokeOpacity="0.35"/>
+      {/* Outer border */}
+      <rect x="6" y="6" width="36" height="36" stroke="url(#bp-grad)" strokeWidth="1.5" fill="none" rx="1"/>
+      {/* Central highlighted node */}
+      <rect x="18" y="18" width="12" height="12" stroke="url(#bp-grad)" strokeWidth="1.5" fill="url(#bp-grad)" fillOpacity="0.2" rx="1"/>
+      <circle cx="24" cy="24" r="3" fill="url(#bp-grad)"/>
+      {/* Corner crosshairs */}
+      <line x1="4" y1="6" x2="8" y2="6" stroke="#00D4FF" strokeWidth="1" strokeOpacity="0.6"/>
+      <line x1="6" y1="4" x2="6" y2="8" stroke="#00D4FF" strokeWidth="1" strokeOpacity="0.6"/>
+    </svg>
+  )
+}
+
+// Engineering Team Leadership — hierarchy tree
+export function TeamIcon({ className = '', size = 48 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="tm-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#00D4FF"/>
+          <stop offset="1" stopColor="#8B00FF"/>
+        </linearGradient>
+      </defs>
+      {/* Root node */}
+      <circle cx="24" cy="10" r="5" fill="url(#tm-grad)"/>
+      <circle cx="24" cy="10" r="2.5" fill="#050510"/>
+      {/* Vertical connector down */}
+      <line x1="24" y1="15" x2="24" y2="24" stroke="url(#tm-grad)" strokeWidth="1.5" strokeOpacity="0.8"/>
+      {/* Horizontal bar */}
+      <line x1="12" y1="24" x2="36" y2="24" stroke="url(#tm-grad)" strokeWidth="1.5" strokeOpacity="0.8"/>
+      {/* Left branch down */}
+      <line x1="12" y1="24" x2="12" y2="33" stroke="url(#tm-grad)" strokeWidth="1.5" strokeOpacity="0.8"/>
+      {/* Center branch down */}
+      <line x1="24" y1="24" x2="24" y2="33" stroke="url(#tm-grad)" strokeWidth="1.5" strokeOpacity="0.8"/>
+      {/* Right branch down */}
+      <line x1="36" y1="24" x2="36" y2="33" stroke="url(#tm-grad)" strokeWidth="1.5" strokeOpacity="0.8"/>
+      {/* Leaf nodes */}
+      <circle cx="12" cy="37" r="4" fill="url(#tm-grad)" fillOpacity="0.8"/>
+      <circle cx="12" cy="37" r="2" fill="#050510"/>
+      <circle cx="24" cy="37" r="4" fill="url(#tm-grad)" fillOpacity="0.8"/>
+      <circle cx="24" cy="37" r="2" fill="#050510"/>
+      <circle cx="36" cy="37" r="4" fill="url(#tm-grad)" fillOpacity="0.8"/>
+      <circle cx="36" cy="37" r="2" fill="#050510"/>
+    </svg>
+  )
+}
+
+// Security & Compliance — shield with circuit/lock symbol
+export function SecurityIcon({ className = '', size = 48 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="sec-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#00D4FF"/>
+          <stop offset="1" stopColor="#8B00FF"/>
+        </linearGradient>
+      </defs>
+      {/* Shield outline */}
+      <path d="M24 4 L40 10 L40 24 C40 33 24 44 24 44 C24 44 8 33 8 24 L8 10 Z" stroke="url(#sec-grad)" strokeWidth="1.5" fill="url(#sec-grad)" fillOpacity="0.08"/>
+      {/* Inner shield glow line */}
+      <path d="M24 8 L36 13 L36 24 C36 31 24 40 24 40 C24 40 12 31 12 24 L12 13 Z" stroke="url(#sec-grad)" strokeWidth="0.75" strokeOpacity="0.3" fill="none"/>
+      {/* Lock body */}
+      <rect x="19" y="24" width="10" height="8" rx="1.5" stroke="url(#sec-grad)" strokeWidth="1.5" fill="none"/>
+      {/* Lock shackle */}
+      <path d="M20.5 24 L20.5 21 C20.5 18.5 27.5 18.5 27.5 21 L27.5 24" stroke="url(#sec-grad)" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+      {/* Keyhole dot */}
+      <circle cx="24" cy="28" r="1.5" fill="url(#sec-grad)"/>
+      {/* Circuit dots on shield */}
+      <circle cx="14" cy="17" r="1" fill="#00D4FF" fillOpacity="0.6"/>
+      <circle cx="34" cy="17" r="1" fill="#8B00FF" fillOpacity="0.6"/>
+    </svg>
+  )
+}
+
+// Investor & Board Readiness — upward trend with star
+export function InvestorIcon({ className = '', size = 48 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="inv-grad" x1="0" y1="48" x2="48" y2="0" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#00D4FF"/>
+          <stop offset="1" stopColor="#8B00FF"/>
+        </linearGradient>
+      </defs>
+      {/* Axes */}
+      <line x1="8" y1="40" x2="8" y2="10" stroke="url(#inv-grad)" strokeWidth="1.5" strokeLinecap="round" strokeOpacity="0.5"/>
+      <line x1="8" y1="40" x2="42" y2="40" stroke="url(#inv-grad)" strokeWidth="1.5" strokeLinecap="round" strokeOpacity="0.5"/>
+      {/* Trend line */}
+      <polyline points="10,36 18,30 26,26 34,18 40,12" stroke="url(#inv-grad)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+      {/* Data points */}
+      <circle cx="10" cy="36" r="2" fill="#00D4FF" fillOpacity="0.8"/>
+      <circle cx="26" cy="26" r="2" fill="url(#inv-grad)" fillOpacity="0.8"/>
+      <circle cx="40" cy="12" r="2" fill="#8B00FF" fillOpacity="0.8"/>
+      {/* Star above peak */}
+      <path d="M40 4 L41.2 7.6 L45 7.6 L42 9.8 L43.2 13.4 L40 11.2 L36.8 13.4 L38 9.8 L35 7.6 L38.8 7.6 Z" fill="url(#inv-grad)" fillOpacity="0.9"/>
+    </svg>
+  )
+}
+
+// Vendor & Partner Evaluation — two nodes connected by bridge
+export function PartnerIcon({ className = '', size = 48 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="pt-grad" x1="0" y1="0" x2="48" y2="0" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#00D4FF"/>
+          <stop offset="1" stopColor="#8B00FF"/>
+        </linearGradient>
+      </defs>
+      {/* Left node */}
+      <circle cx="10" cy="24" r="7" stroke="#00D4FF" strokeWidth="1.5" fill="none"/>
+      <circle cx="10" cy="24" r="3" fill="#00D4FF" fillOpacity="0.8"/>
+      {/* Right node */}
+      <circle cx="38" cy="24" r="7" stroke="#8B00FF" strokeWidth="1.5" fill="none"/>
+      <circle cx="38" cy="24" r="3" fill="#8B00FF" fillOpacity="0.8"/>
+      {/* Bridge connectors */}
+      <line x1="17" y1="24" x2="31" y2="24" stroke="url(#pt-grad)" strokeWidth="1.5"/>
+      <line x1="17" y1="20" x2="31" y2="20" stroke="url(#pt-grad)" strokeWidth="0.75" strokeOpacity="0.4"/>
+      <line x1="17" y1="28" x2="31" y2="28" stroke="url(#pt-grad)" strokeWidth="0.75" strokeOpacity="0.4"/>
+      {/* Bridge verticals */}
+      <line x1="21" y1="20" x2="21" y2="28" stroke="url(#pt-grad)" strokeWidth="0.75" strokeOpacity="0.5"/>
+      <line x1="27" y1="20" x2="27" y2="28" stroke="url(#pt-grad)" strokeWidth="0.75" strokeOpacity="0.5"/>
+      {/* Central link node */}
+      <circle cx="24" cy="24" r="2.5" fill="url(#pt-grad)"/>
+    </svg>
+  )
+}
+
+// Education — geometric graduation cap
+export function EducationIcon({ className = '', size = 48 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="edu-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#00D4FF"/>
+          <stop offset="1" stopColor="#8B00FF"/>
+        </linearGradient>
+      </defs>
+      {/* Cap brim — diamond/chevron */}
+      <path d="M8 22 L24 14 L40 22 L24 30 Z" stroke="url(#edu-grad)" strokeWidth="1.5" fill="url(#edu-grad)" fillOpacity="0.15" strokeLinejoin="round"/>
+      {/* Cap top highlight */}
+      <path d="M24 14 L40 22 L24 30 L8 22 Z" stroke="url(#edu-grad)" strokeWidth="0" fill="url(#edu-grad)" fillOpacity="0.05"/>
+      {/* Tassel stem */}
+      <line x1="40" y1="22" x2="40" y2="32" stroke="#8B00FF" strokeWidth="1.5" strokeLinecap="round"/>
+      {/* Tassel end */}
+      <circle cx="40" cy="34" r="2" fill="#8B00FF" fillOpacity="0.8"/>
+      {/* Body of cap */}
+      <path d="M16 26 L16 34 C16 34 20 38 24 38 C28 38 32 34 32 34 L32 26" stroke="url(#edu-grad)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+      {/* Center dot */}
+      <circle cx="24" cy="22" r="2" fill="url(#edu-grad)"/>
+    </svg>
+  )
+}
+
+// Check mark — clean geometric checkmark
+export function CheckIcon({ className = '', size = 20 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="chk-grad" x1="0" y1="0" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#00D4FF"/>
+          <stop offset="1" stopColor="#8B00FF"/>
+        </linearGradient>
+      </defs>
+      <polyline points="3,10 8,15 17,5" stroke="url(#chk-grad)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+    </svg>
+  )
+}

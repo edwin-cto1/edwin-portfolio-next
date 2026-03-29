@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import { EducationIcon } from './icons'
 
 const stats = [
   { value: 10, suffix: '+', label: 'Years Experience' },
@@ -146,7 +147,7 @@ export default function About() {
 
             {/* Education */}
             <div className="glass-card rounded-xl p-4 flex items-center gap-3">
-              <span className="text-2xl" aria-hidden="true">🎓</span>
+              <EducationIcon size={32} />
               <div>
                 <p className="text-text-primary font-semibold text-sm">Education</p>
                 <p className="text-text-dim text-sm">Systems Engineering</p>

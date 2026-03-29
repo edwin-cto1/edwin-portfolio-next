@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { CheckIcon } from '../components/icons'
 
 interface Metric {
   label: string
@@ -214,12 +215,7 @@ export default function CaseStudiesPage() {
                 </div>
                 <div className="p-8">
                   <h3 className="font-orbitron text-sm font-bold text-electric-blue uppercase tracking-wider mb-3 flex items-center gap-2">
-                    <span
-                      className="w-5 h-5 rounded-full border border-electric-blue/50 flex items-center justify-center text-xs"
-                      aria-hidden="true"
-                    >
-                      ✓
-                    </span>
+                    <CheckIcon size={18} />
                     Results
                   </h3>
                   <p className="text-text-dim font-space-grotesk text-sm leading-relaxed">
