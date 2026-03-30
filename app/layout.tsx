@@ -108,6 +108,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {process.env.VERCEL_ENV !== 'production' && (
+          <meta name="robots" content="noindex, nofollow" />
+        )}
       </head>
       <body className="font-space-grotesk bg-bg-primary text-text-primary antialiased">
         <a

@@ -117,6 +117,45 @@ const data: ServicePageData = {
       a: 'We instrument every deployed model with monitoring for data distribution shifts, prediction confidence, and business-level KPIs. When drift is detected, automated retraining pipelines kick in. We also schedule periodic model audits as part of ongoing engagements.',
     },
   ],
+  pricingTiers: [
+    {
+      name: 'Proof of Concept',
+      price: '$8,000',
+      description: 'Single ML model, data pipeline, deployment',
+      features: [
+        'Single production ML model',
+        'End-to-end data pipeline',
+        'REST API deployment',
+        'Basic monitoring dashboard',
+        'Integration documentation',
+      ],
+    },
+    {
+      name: 'Production',
+      price: '$25,000',
+      description: 'Full ML system, monitoring, API integration',
+      features: [
+        'Full ML system with multiple models',
+        'MLOps pipeline and versioning',
+        'Advanced monitoring and drift detection',
+        'API integration and dashboards',
+        'Retraining automation',
+      ],
+      highlighted: true,
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      description: 'Multi-model platform, MLOps, ongoing optimization',
+      features: [
+        'Everything in Production',
+        'Multi-model platform architecture',
+        'Full MLOps infrastructure',
+        'Ongoing model optimization',
+        'Dedicated ML engineering team',
+      ],
+    },
+  ],
   ctaHeading: 'Ready to Leverage AI?',
   ctaSubheading:
     "Let's turn your data into a competitive advantage. From proof of concept to production — we've got you covered.",

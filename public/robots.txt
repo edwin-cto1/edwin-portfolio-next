@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://edwinportillo.dev/sitemap.xml
+Sitemap: https://cto1.tech/sitemap.xml

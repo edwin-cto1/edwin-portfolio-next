@@ -116,6 +116,45 @@ const data: ServicePageData = {
       a: "Yes — and it's designed to be easy. We write comprehensive documentation, maintain clean architecture boundaries, and set up CI/CD so your team (or ours) can ship features confidently. Post-launch retainer engagements are available for ongoing development.",
     },
   ],
+  pricingTiers: [
+    {
+      name: 'MVP',
+      price: '$15,000',
+      description: 'Core features, auth, payments, deploy in 8 weeks',
+      features: [
+        'Core product features',
+        'Auth and user management',
+        'Stripe payment integration',
+        'Production deployment',
+        'CI/CD pipeline setup',
+      ],
+    },
+    {
+      name: 'Growth',
+      price: '$50,000',
+      description: 'Full-featured platform, multi-tenancy, analytics',
+      features: [
+        'Everything in MVP',
+        'Multi-tenant architecture',
+        'SaaS metrics dashboard',
+        'Feature flags and A/B testing',
+        'White-labeling support',
+      ],
+      highlighted: true,
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      description: 'Custom architecture, dedicated team, SLA',
+      features: [
+        'Everything in Growth',
+        'Custom enterprise architecture',
+        'Dedicated development team',
+        'SSO and advanced RBAC',
+        'SLA and priority support',
+      ],
+    },
+  ],
   ctaHeading: 'Ready to Build Your SaaS?',
   ctaSubheading:
     "Let's turn your product idea into a revenue-generating platform. From zero to launch — we've done this before.",

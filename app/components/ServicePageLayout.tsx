@@ -53,6 +53,14 @@ export interface EngagementModel {
   features: string[]
 }
 
+export interface PricingTier {
+  name: string
+  price: string
+  description: string
+  features: string[]
+  highlighted?: boolean
+}
+
 export interface ServicePageData {
   iconId: ServiceIconId
   heroTitle: string
@@ -67,6 +75,7 @@ export interface ServicePageData {
   ctaHeading: string
   ctaSubheading: string
   engagementModels?: EngagementModel[]
+  pricingTiers?: PricingTier[]
 }
 
 // ─── Animation helper ────────────────────────────────────────────────────────
@@ -184,6 +193,7 @@ export default function ServicePageLayout({
   ctaHeading,
   ctaSubheading,
   engagementModels,
+  pricingTiers,
 }: ServicePageData) {
   const Icon = ICONS[iconId]
   return (
@@ -515,6 +525,112 @@ export default function ServicePageLayout({
             </div>
           </div>
         </section>
+
+        {/* ── Pricing ───────────────────────────────────────────────────── */}
+        {pricingTiers && pricingTiers.length > 0 && (
+          <section
+            className="py-20 sm:py-28 px-4 sm:px-6"
+            style={{ background: 'rgba(8,8,32,0.5)' }}
+            aria-labelledby="pricing-heading"
+          >
+            <div className="max-w-7xl mx-auto">
+              <FadeInSection>
+                <div className="text-center mb-12">
+                  <p className="font-space-grotesk text-sm font-semibold tracking-[0.3em] uppercase text-electric-blue mb-3">
+                    Transparent Pricing
+                  </p>
+                  <h2
+                    id="pricing-heading"
+                    className="font-orbitron text-3xl sm:text-4xl font-bold gradient-text"
+                  >
+                    Investment
+                  </h2>
+                </div>
+              </FadeInSection>
+              <div className="grid md:grid-cols-3 gap-6 items-stretch">
+                {pricingTiers.map((tier, i) => (
+                  <FadeInSection key={i} delay={i * 100} className="h-full">
+                    {tier.highlighted ? (
+                      <div
+                        className="relative rounded-2xl h-full"
+                        style={{ padding: '1px', background: 'linear-gradient(135deg, #00D4FF, #8B00FF)' }}
+                      >
+                        <div
+                          data-highlighted="true"
+                          className="rounded-2xl p-8 h-full flex flex-col"
+                          style={{ background: 'rgb(8, 8, 28)' }}
+                        >
+                          <div className="text-center mb-4">
+                            <span className="font-orbitron text-xs font-bold tracking-widest text-electric-blue bg-electric-blue/10 px-3 py-1 rounded-full">
+                              MOST POPULAR
+                            </span>
+                          </div>
+                          <h3 className="font-orbitron text-xl font-bold gradient-text mb-2 text-center">
+                            {tier.name}
+                          </h3>
+                          <div className="text-center mb-4">
+                            <span className="font-orbitron text-3xl font-bold gradient-text">{tier.price}</span>
+                          </div>
+                          <p className="text-text-dim text-sm text-center mb-6">{tier.description}</p>
+                          <ul className="space-y-3 flex-1" role="list">
+                            {tier.features.map((feat, j) => (
+                              <li key={j} className="flex items-start gap-2 text-text-dim text-sm">
+                                <span aria-hidden="true" className="mt-0.5 flex-shrink-0 text-electric-blue">
+                                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                    <path d="M2 7l3 3.5L12 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                  </svg>
+                                </span>
+                                {feat}
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="mt-8">
+                            <Link
+                              href="/#contact"
+                              className="gradient-bg text-white font-semibold px-6 py-3 rounded-full w-full block text-center hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-electric-blue focus:ring-offset-2 focus:ring-offset-bg-primary"
+                            >
+                              Get Started
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="glass-card rounded-2xl p-8 border border-white/8 hover:border-electric-blue/30 hover:bg-white/[0.04] transition-all duration-300 h-full flex flex-col">
+                        <h3 className="font-orbitron text-xl font-bold gradient-text mb-2 text-center">
+                          {tier.name}
+                        </h3>
+                        <div className="text-center mb-4">
+                          <span className="font-orbitron text-3xl font-bold gradient-text">{tier.price}</span>
+                        </div>
+                        <p className="text-text-dim text-sm text-center mb-6">{tier.description}</p>
+                        <ul className="space-y-3 flex-1" role="list">
+                          {tier.features.map((feat, j) => (
+                            <li key={j} className="flex items-start gap-2 text-text-dim text-sm">
+                              <span aria-hidden="true" className="mt-0.5 flex-shrink-0 text-electric-blue">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                  <path d="M2 7l3 3.5L12 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                              </span>
+                              {feat}
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="mt-8">
+                          <Link
+                            href="/#contact"
+                            className="glass-card border border-white/20 text-text-primary font-semibold px-6 py-3 rounded-full w-full block text-center hover:border-electric-blue/40 transition-colors focus:outline-none focus:ring-2 focus:ring-electric-blue focus:ring-offset-2 focus:ring-offset-bg-primary"
+                          >
+                            Get Started
+                          </Link>
+                        </div>
+                      </div>
+                    )}
+                  </FadeInSection>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* ── Engagement Models (optional — CTO Advisory) ───────────────── */}
         {engagementModels && engagementModels.length > 0 && (

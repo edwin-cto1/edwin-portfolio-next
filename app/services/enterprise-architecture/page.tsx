@@ -116,6 +116,45 @@ const data: ServicePageData = {
       a: 'We design for horizontal scalability, implement caching strategies, choose the right databases for each use case, and plan your CDN and load-balancing layers. We also conduct load testing simulations before launch so there are no surprises under real traffic.',
     },
   ],
+  pricingTiers: [
+    {
+      name: 'Audit',
+      price: '$2,500',
+      description: 'Architecture review, bottleneck analysis, recommendations report',
+      features: [
+        'Full system and codebase review',
+        'Bottleneck and risk identification',
+        'Detailed recommendations report',
+        'Tech stack assessment',
+        '1-hour findings presentation',
+      ],
+    },
+    {
+      name: 'Design',
+      price: '$15,000',
+      description: 'Full system design, tech stack selection, scalability roadmap',
+      features: [
+        'End-to-end architecture blueprints',
+        'Tech stack selection and rationale',
+        '12–24 month scalability roadmap',
+        'API design specifications',
+        'ADRs and implementation guide',
+      ],
+      highlighted: true,
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      description: 'End-to-end architecture with implementation support',
+      features: [
+        'Everything in Design',
+        'Hands-on implementation support',
+        'Team training and knowledge transfer',
+        'Ongoing architecture advisory',
+        'Dedicated engagement manager',
+      ],
+    },
+  ],
   ctaHeading: 'Ready to Architect Your Future?',
   ctaSubheading:
     "Let's design a system that scales with your ambitions. One conversation can save you years of technical debt.",

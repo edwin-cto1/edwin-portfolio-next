@@ -116,6 +116,45 @@ const data: ServicePageData = {
       a: "Yes. We've migrated stores from WooCommerce, Magento, BigCommerce, and custom solutions. We handle data migration (products, customers, orders), URL redirect mapping to preserve SEO equity, and a staged go-live to eliminate downtime. Your SEO rankings and customer history are protected.",
     },
   ],
+  pricingTiers: [
+    {
+      name: 'Launch',
+      price: '$10,000',
+      description: 'Storefront, payments, inventory, launch ready',
+      features: [
+        'Custom storefront design',
+        'Payment gateway integration',
+        'Inventory management system',
+        'SEO and analytics setup',
+        'Launch-ready in 8 weeks',
+      ],
+    },
+    {
+      name: 'Scale',
+      price: '$30,000',
+      description: 'Headless commerce, personalization, performance',
+      features: [
+        'Headless commerce architecture',
+        'Personalization engine',
+        'Core Web Vitals optimization',
+        'Advanced search with Algolia',
+        'Multi-currency support',
+      ],
+      highlighted: true,
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      description: 'Custom platform, ERP integration, omnichannel',
+      features: [
+        'Everything in Scale',
+        'ERP and PIM integration',
+        'Omnichannel commerce',
+        'Custom checkout experience',
+        'Dedicated engineering team',
+      ],
+    },
+  ],
   ctaHeading: 'Ready to Launch Your Store?',
   ctaSubheading:
     "Let's build an eCommerce platform that turns browsers into buyers. Performance, conversion, and scale — built in from day one.",

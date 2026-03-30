@@ -118,6 +118,45 @@ const data: ServicePageData = {
       a: "Security is built in, not bolted on. We implement CIS benchmark configurations, enforce least-privilege IAM, use secrets managers (Vault, AWS Secrets Manager) for credentials, set up automated vulnerability scanning, and configure WAF and DDoS protection. We also run periodic penetration tests and provide compliance reporting.",
     },
   ],
+  pricingTiers: [
+    {
+      name: 'Starter',
+      price: '$3,000/mo',
+      description: 'Up to 3 services, monitoring, basic DevOps',
+      features: [
+        'Up to 3 managed cloud services',
+        'Basic monitoring and alerting',
+        'CI/CD pipeline setup',
+        'Monthly cost review',
+        'Email support',
+      ],
+    },
+    {
+      name: 'Growth',
+      price: '$8,000/mo',
+      description: 'Full cloud management, CI/CD, cost optimization',
+      features: [
+        'Unlimited managed services',
+        'Full CI/CD automation',
+        'Cloud cost optimization',
+        'Security hardening (CIS)',
+        'Slack + priority support',
+      ],
+      highlighted: true,
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      description: 'Dedicated infrastructure team, 24/7 SLA',
+      features: [
+        'Everything in Growth',
+        'Dedicated infrastructure team',
+        '24/7 on-call SLA',
+        'Compliance reporting (SOC 2)',
+        'Disaster recovery planning',
+      ],
+    },
+  ],
   ctaHeading: 'Ready to Modernize Your Infrastructure?',
   ctaSubheading:
     "Stop babysitting servers. Let's build the cloud infrastructure your team deserves — reliable, scalable, and cost-efficient.",
