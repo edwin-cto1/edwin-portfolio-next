@@ -90,7 +90,6 @@ const jsonLd = {
   url: 'https://cto1.tech',
   description:
     'Enterprise technology services — AI/ML, SaaS, cloud infrastructure, eCommerce',
-  sameAs: ['https://linkedin.com/in/csedwin'],
 }
 
 export default function RootLayout({
