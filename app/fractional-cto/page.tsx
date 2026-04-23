@@ -7,7 +7,7 @@ import { RoadmapIcon, BlueprintIcon, TeamIcon, SecurityIcon, InvestorIcon, Partn
 export const metadata: Metadata = {
   title: 'Fractional CTO Services | CTO1 — Expert Tech Leadership for Startups',
   description:
-    'Fractional CTO services for startups and growing companies. Get senior technical leadership from $3K/month — strategy, architecture, team building, and investor readiness. No full-time hire needed.',
+    'Fractional CTO services for startups and growing companies. Get senior technical leadership from $5K/month — strategy, architecture, team building, and investor readiness. No full-time hire needed.',
   keywords: [
     'fractional cto',
     'fractional cto services',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fractional CTO Services | CTO1',
     description:
-      'Senior technical leadership for startups — strategy, architecture, team building from $3K/month.',
+      'Senior technical leadership for startups — strategy, architecture, team building from $5K/month.',
     url: 'https://cto1.tech/fractional-cto',
     siteName: 'CTO1',
     type: 'website',
@@ -71,7 +71,7 @@ const included = [
 const pricingTiers = [
   {
     name: 'Starter',
-    price: '$3,000',
+    price: '$5,000',
     period: '/month',
     hours: '10 hours/month',
     description: 'Strategic guidance for early-stage startups that need senior direction without heavy involvement.',
@@ -88,7 +88,7 @@ const pricingTiers = [
   },
   {
     name: 'Growth',
-    price: '$7,000',
+    price: '$10,000',
     period: '/month',
     hours: '25 hours/month',
     description: 'Hands-on leadership for companies in active growth — shipping features, scaling teams, and handling complexity.',

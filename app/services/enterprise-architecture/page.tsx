@@ -119,7 +119,7 @@ const data: ServicePageData = {
   pricingTiers: [
     {
       name: 'Audit',
-      price: '$2,500',
+      price: '$8,000',
       description: 'Architecture review, bottleneck analysis, recommendations report',
       features: [
         'Full system and codebase review',
@@ -131,7 +131,7 @@ const data: ServicePageData = {
     },
     {
       name: 'Design',
-      price: '$15,000',
+      price: '$35,000',
       description: 'Full system design, tech stack selection, scalability roadmap',
       features: [
         'End-to-end architecture blueprints',

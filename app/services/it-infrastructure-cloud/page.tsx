@@ -121,7 +121,7 @@ const data: ServicePageData = {
   pricingTiers: [
     {
       name: 'Starter',
-      price: '$3,000/mo',
+      price: '$4,500/mo',
       description: 'Up to 3 services, monitoring, basic DevOps',
       features: [
         'Up to 3 managed cloud services',
@@ -133,7 +133,7 @@ const data: ServicePageData = {
     },
     {
       name: 'Growth',
-      price: '$8,000/mo',
+      price: '$12,000/mo',
       description: 'Full cloud management, CI/CD, cost optimization',
       features: [
         'Unlimited managed services',

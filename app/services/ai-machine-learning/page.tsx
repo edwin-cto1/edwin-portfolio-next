@@ -120,7 +120,7 @@ const data: ServicePageData = {
   pricingTiers: [
     {
       name: 'Proof of Concept',
-      price: '$8,000',
+      price: '$25,000',
       description: 'Single ML model, data pipeline, deployment',
       features: [
         'Single production ML model',
@@ -132,7 +132,7 @@ const data: ServicePageData = {
     },
     {
       name: 'Production',
-      price: '$25,000',
+      price: '$75,000',
       description: 'Full ML system, monitoring, API integration',
       features: [
         'Full ML system with multiple models',

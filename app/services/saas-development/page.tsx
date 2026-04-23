@@ -119,7 +119,7 @@ const data: ServicePageData = {
   pricingTiers: [
     {
       name: 'MVP',
-      price: '$15,000',
+      price: '$25,000',
       description: 'Core features, auth, payments, deploy in 8 weeks',
       features: [
         'Core product features',
@@ -131,7 +131,7 @@ const data: ServicePageData = {
     },
     {
       name: 'Growth',
-      price: '$50,000',
+      price: '$85,000',
       description: 'Full-featured platform, multi-tenancy, analytics',
       features: [
         'Everything in MVP',

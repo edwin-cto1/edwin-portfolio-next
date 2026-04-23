@@ -77,7 +77,7 @@ Finally, if you're a non-technical founder building a technical product, a fract
         heading: 'What CTO1 Offers',
         content: `CTO1 provides fractional CTO and CTO advisory services to startups and growing companies across industries. Our engagements are structured around your specific stage and needs — whether that's a one-time architecture review, an ongoing advisory retainer, or embedded leadership during a critical growth phase.
 
-Our Starter engagement ($3,000/month) covers up to 10 hours of dedicated CTO time per month — ideal for early-stage startups that need guidance without day-to-day involvement. Our Growth engagement ($7,000/month) extends to 25 hours per month with hands-on architecture work and team coaching. For companies at scale or in the midst of complex transformations, we offer custom Enterprise arrangements with dedicated availability.
+Our Starter engagement ($5,000/month) covers up to 10 hours of dedicated CTO time per month — ideal for early-stage startups that need guidance without day-to-day involvement. Our Growth engagement ($10,000/month) extends to 25 hours per month with hands-on architecture work and team coaching. For companies at scale or in the midst of complex transformations, we offer custom Enterprise arrangements with dedicated availability.
 
 Every engagement begins with a technical audit and roadmap session. We believe you should understand exactly where your system stands, what your top risks are, and what the path forward looks like before we ask you to commit to anything ongoing. That transparency is how we earn your trust — and it's how we ensure you actually get value from day one.`,
       },

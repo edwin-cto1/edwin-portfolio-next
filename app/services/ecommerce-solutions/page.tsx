@@ -119,7 +119,7 @@ const data: ServicePageData = {
   pricingTiers: [
     {
       name: 'Launch',
-      price: '$10,000',
+      price: '$15,000',
       description: 'Storefront, payments, inventory, launch ready',
       features: [
         'Custom storefront design',
@@ -131,7 +131,7 @@ const data: ServicePageData = {
     },
     {
       name: 'Scale',
-      price: '$30,000',
+      price: '$45,000',
       description: 'Headless commerce, personalization, performance',
       features: [
         'Headless commerce architecture',
