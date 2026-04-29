@@ -147,6 +147,48 @@ const data: ServicePageData = {
       a: "We typically start within one week of contract signing. The first two weeks are an intensive assessment phase where we meet your team, review your systems, and develop our initial strategic recommendations. By the end of week two, you'll have a clear picture of your technology strengths, gaps, and priorities.",
     },
   ],
+  pricingTiers: [
+    {
+      name: 'Advisory',
+      price: '$2,500/month',
+      description: 'Strategic guidance for founders who need a trusted tech voice',
+      features: [
+        'Monthly strategy sessions',
+        'Technology roadmap review',
+        'Email & Slack access',
+        'Vendor & hiring recommendations',
+        'Architecture feedback',
+      ],
+    },
+    {
+      name: 'Hands-On',
+      price: '$7,500/month',
+      description: 'Active involvement in product and engineering decisions',
+      features: [
+        'Weekly working sessions',
+        'Sprint planning & review participation',
+        'Team coaching & mentoring',
+        'Architecture design & code reviews',
+        'CTO-level stakeholder communication',
+        'Technology risk assessments',
+      ],
+      highlighted: true,
+    },
+    {
+      name: 'Embedded Leadership',
+      price: '$15,000/month',
+      description: 'Full fractional CTO engagement with dedicated availability',
+      features: [
+        'Dedicated availability (20+ hrs/month)',
+        'Full engineering team leadership',
+        'Executive-level reporting',
+        'Build vs. buy analysis',
+        'Technical due diligence',
+        'Investor & board presentations',
+        'Custom scope available',
+      ],
+    },
+  ],
   ctaHeading: 'Ready for Strategic Technology Leadership?',
   ctaSubheading:
     "Let's talk about where your technology needs to go and how to get there. No obligation — just a straightforward conversation.",
